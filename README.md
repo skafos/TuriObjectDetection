@@ -1,1 +1,1 @@
-# TuriObjectDetection
+# Turi Object Detection
