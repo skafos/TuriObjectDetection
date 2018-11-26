@@ -1,0 +1,7 @@
+project_token: b94b9e447fea254077940856
+name: TuriObjectDetection
+jobs:
+  - job_id: 358a538e-12a6-49b5-af75-b5c6f7769485
+    language: python
+    name: Main
+    entrypoint: "main.py"
