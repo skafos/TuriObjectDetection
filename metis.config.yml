@@ -5,3 +5,11 @@ jobs:
     language: python
     name: object_detection
     entrypoint: "object_detection.py"
+    resources:
+      requests:
+        cpu: 6
+        memory: 8Gi
+      limits:
+        cpu: 6
+        memory: 8Gi
+use_cache: false
