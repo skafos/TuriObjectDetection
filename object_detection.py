@@ -1,4 +1,25 @@
+import urllib.request
+import tarfile
 import turicreate as tc
+from skafossdk import *
+import save_models as sm
+import coremltools
+
+ska = Skafos()
+
+
+data_url = "https://s3.amazonaws.com/skafos.example.data/ig02.sframe.tar.gz"
+data_path = "ig02.sframe.tar.gz"
+
+# pull the tar
+#ska.log("Retrieving the images from online", labels = ['image_similarity'])
+retrieve = urllib.request.urlretrieve(data_url, data_path)
+
+# extract the file
+#ska.log("Images downloaded, extracting the images", labels = ['image_similarity'])
+tar = tarfile.open(data_path)
+tar.extractall()
+tar.close()
 
 # Load the data
 data =  tc.SFrame('ig02.sframe')
@@ -7,16 +28,20 @@ data =  tc.SFrame('ig02.sframe')
 train_data, test_data = data.random_split(0.8)
 
 # Create a model
-model = tc.object_detector.create(train_data)
-
-# Save predictions to an SArray
-predictions = model.predict(test_data)
-
-# Evaluate the model and save the results into a dictionary
-metrics = model.evaluate(test_data)
+model = tc.object_detector.create(train_data, max_iterations=4000)
 
 # Save the model for later use in Turi Create
-model.save('mymodel.model')
+coreml_model_name = 'object_detection.mlmodel'
+res = model.export_coreml(coreml_model_name)
 
-# Export for use in Core ML
-model.export_coreml('MyCustomObjectDetector.mlmodel')
+model_spec = coremltools.utils.load_spec(coreml_model_name)
+model_fp16_spec = coremltools.utils.convert_neural_network_spec_weights_to_fp16(model_spec)
+coremltools.utils.save_spec(model_fp16_spec, coreml_model_name)
+
+# compress the model
+compressed_model_name, compressed_model = sm.compress_model(coreml_model_name)
+
+# save to Skafos
+sm.skafos_save_model(skafos = ska, model_name = compressed_model_name,
+								compressed_model = compressed_model,
+								permissions = 'public')
