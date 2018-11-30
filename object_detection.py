@@ -28,7 +28,7 @@ data =  tc.SFrame('ig02.sframe')
 train_data, test_data = data.random_split(0.8)
 
 # Create a model
-model = tc.object_detector.create(train_data, max_iterations=4000)
+model = tc.object_detector.create(train_data, max_iterations=900)
 
 # Save the model for later use in Turi Create
 coreml_model_name = 'object_detection.mlmodel'

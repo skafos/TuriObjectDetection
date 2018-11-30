@@ -12,4 +12,3 @@ jobs:
       limits:
         cpu: 6
         memory: 8Gi
-use_cache: false
