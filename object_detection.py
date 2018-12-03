@@ -34,6 +34,7 @@ model = tc.object_detector.create(train_data, max_iterations=900)
 coreml_model_name = 'object_detection.mlmodel'
 res = model.export_coreml(coreml_model_name)
 
+# Convert to half-precision
 model_spec = coremltools.utils.load_spec(coreml_model_name)
 model_fp16_spec = coremltools.utils.convert_neural_network_spec_weights_to_fp16(model_spec)
 coremltools.utils.save_spec(model_fp16_spec, coreml_model_name)

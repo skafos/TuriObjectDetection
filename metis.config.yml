@@ -8,7 +8,7 @@ jobs:
     resources:
       requests:
         cpu: 6
-        memory: 8Gi
+        memory: 10Gi
       limits:
         cpu: 6
-        memory: 8Gi
+        memory: 11Gi
