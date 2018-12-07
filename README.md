@@ -1,6 +1,6 @@
 # Turi Object Detection
 
-_This public repository is designed for use in the Skafos ML delivery platform, which is available at metismachine.com._
+_This public repository is designed for use in the Skafos ML delivery platform, which is available at metismachine.com. Use of this repo outside of the Skafos platform is not supported by Metis Machine_
 
 The following repo contains code for training an object detection model on Skafos using the Turi Create framework. As much as possible, the code in this repo mimicks Turi Create's object detection example which can be found [here](https://apple.github.io/turicreate/docs/userguide/object_detection/). 
 
