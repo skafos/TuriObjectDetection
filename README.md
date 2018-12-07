@@ -17,5 +17,4 @@ Additionallly, there exist:
 - `load_object_data.ipynb` - a helper notebook that saved the data in the proper format for this model. This was taken from [Turi Create's own data cleaning](https://apple.github.io/turicreate/docs/userguide/object_detection/data-preparation.html)
 
 ## Further notes:
-- To get this to run, the model required training data. The training data for this example comes from the open source data set [Graz-02](https://lear.inrialpes.fr/people/marszalek/data/ig02/)
 - For this project, we highly recommend running it on a GPU. We encourage you to do this once you've changed the data to reflect your use case. As benchmarks, we've found this takes about 60 minutes on a GPU and about 1.5 days on Skafos with 6 CPU's and 10G of memory. This can take considerably more time locally using only CPU. 

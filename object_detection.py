@@ -11,17 +11,17 @@ ska = Skafos()
 data_url = "https://s3.amazonaws.com/skafos.example.data/ObjectDetection/ig02.sframe.tar.gz"
 data_path = "ig02.sframe.tar.gz"
 
-# pull the tar
-#ska.log("Retrieving the images from online", labels = ['image_similarity'])
+# Fetch training data from an AWS bucket publicly hosted by Metis Machine. This data was generated using load_object_data.ipynb
+ska.log("Retrieving the images from online", labels = ['image_similarity'])
 retrieve = urllib.request.urlretrieve(data_url, data_path)
 
 ## pull the compressed data and extract it
-#ska.log("Images downloaded, extracting the images", labels = ['image_similarity'])
+ska.log("Images downloaded, extracting the images", labels = ['image_similarity'])
 tar = tarfile.open(data_path)
 tar.extractall()
 tar.close()
 
-# Load the data
+# Load the data into a Turi Create SFrame.
 data =  tc.SFrame('ig02.sframe')
 
 # Make a train-test split
