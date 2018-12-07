@@ -30,7 +30,7 @@ train_data, test_data = data.random_split(0.8)
 # Create a model
 model = tc.object_detector.create(train_data, max_iterations=900)
 
-# Save the model for later use in Turi Create
+# Save the model for later use in Skafos
 coreml_model_name = 'object_detection.mlmodel'
 res = model.export_coreml(coreml_model_name)
 
