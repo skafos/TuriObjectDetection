@@ -17,4 +17,4 @@ Additionallly, there exist:
 - `load_object_data.ipynb` - a helper notebook that saved the data in the proper format for this model. This was taken from [Turi Create's own data cleaning](https://apple.github.io/turicreate/docs/userguide/object_detection/data-preparation.html)
 
 ## Further notes:
-- For this project, we highly recommend running it on a GPU. We encourage you to do this once you've changed the data to reflect your use case. As benchmarks, we've found this takes about 60 minutes on a GPU and about 1.5 days on Skafos with 6 CPU's and 10G of memory. This can take considerably more time locally using only CPU. 
+- For retraining this object detection model on new data, we highly recommend doing it on a GPU. As benchmarks, we've found that training this Turi Create object detection model takes about 60 minutes on a GPU and about 1.5 days on Skafos with 6 CPU's and 10G of memory. Training will take considerably more time locally using only CPU. GPU support on Skafos is currently in development and will be coming soon.
