@@ -11,7 +11,7 @@ The two main components to this repo are:
 - `object_detection.ipynb` - a python notebook with the same code as the above `object_detection.py` job.
 
 Additionallly, there exist:
-- `metis.config.yml` - a file telling Skafos how the jobs in this project
+- `metis.config.yml` - a file telling Skafos how to execute the jobs in this project
 - `requirements.txt` - a file telling Skafos the project's dependencies
 - `save_models.py` - a helper module to save the core ml model to Skafos
 - `load_object_data.ipynb` - a helper notebook that saved the data in the proper format for this model. This was taken from [Turi Create's own data cleaning](https://apple.github.io/turicreate/docs/userguide/object_detection/data-preparation.html)
