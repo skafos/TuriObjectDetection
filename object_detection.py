@@ -8,7 +8,7 @@ import coremltools
 ska = Skafos()
 
 
-data_url = "https://s3.amazonaws.com/skafos.example.data/ig02.sframe.tar.gz"
+data_url = "https://s3.amazonaws.com/skafos.example.data/ObjectDetection/ig02.sframe.tar.gz"
 data_path = "ig02.sframe.tar.gz"
 
 # pull the tar
