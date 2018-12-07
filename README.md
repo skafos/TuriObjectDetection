@@ -14,7 +14,7 @@ Additionallly, there exist:
 - `metis.config.yml` - a file telling Skafos how to execute the jobs in this project
 - `requirements.txt` - a file telling Skafos the project's dependencies
 - `save_models.py` - a helper module to save the core ml model to Skafos
-- `load_object_data.ipynb` - a helper notebook that saved the data in the proper format for this model. This was taken from [Turi Create's own data cleaning](https://apple.github.io/turicreate/docs/userguide/object_detection/data-preparation.html)
+- `load_object_data.ipynb` - a helper notebook that saved the data in the proper format for this model. This was taken from [Turi Create's own data cleaning](https://apple.github.io/turicreate/docs/userguide/object_detection/data-preparation.html). You should only need to use this file if you are training this model on your own data, and need a template for getting it in the right format.
 
 ## Further notes:
 - For retraining this object detection model on new data, we highly recommend doing it on a GPU. As benchmarks, we've found that training this Turi Create object detection model takes about 60 minutes on a GPU and about 1.5 days on Skafos with 6 CPU's and 10G of memory. Training will take considerably more time locally using only CPU. GPU support on Skafos is currently in development and will be coming soon.
