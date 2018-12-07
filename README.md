@@ -10,7 +10,7 @@ The two main components to this repo are:
 - `object_detection.py` - a Skafos job that trains an object detection model and saves a core ml model
 - `object_detection.ipynb` - a python notebook with the same code as the above `object_detection.py` job.
 
-Additionallly, there exists:
+Additionallly, there exist:
 - `metis.config.yml` - a file telling Skafos how the jobs in this project
 - `requirements.txt` - a file telling Skafos the project's dependencies
 - `save_models.py` - a helper module to save the core ml model to Skafos
