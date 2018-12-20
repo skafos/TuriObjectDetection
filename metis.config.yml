@@ -1,0 +1,14 @@
+project_token: 7057dd996056c80bfcc85612
+name: TuriObjectDetection
+jobs:
+  - job_id: 86916974-72f7-444a-866c-74baebd2598e
+    language: python
+    name: object_detection
+    entrypoint: "object_detection.py"
+    resources:
+      requests:
+        cpu: 6
+        memory: 10Gi
+      limits:
+        cpu: 6
+        memory: 11Gi
