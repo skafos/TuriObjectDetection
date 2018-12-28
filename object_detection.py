@@ -2,7 +2,7 @@ import urllib.request
 import tarfile
 import turicreate as tc
 from skafossdk import *
-import save_models as sm
+import common.save_models as sm
 import coremltools
 
 ska = Skafos()
@@ -34,7 +34,7 @@ model = tc.object_detector.create(train_data)
 coreml_model_name = 'object_detection.mlmodel'
 res = model.export_coreml(coreml_model_name)
 
-# Convert to half-precision
+# convert model weights to half-precision to save on model size
 model_spec = coremltools.utils.load_spec(coreml_model_name)
 model_fp16_spec = coremltools.utils.convert_neural_network_spec_weights_to_fp16(model_spec)
 coremltools.utils.save_spec(model_fp16_spec, coreml_model_name)
