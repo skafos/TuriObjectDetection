@@ -23,14 +23,10 @@ The components of this repo are:
 - If you wish to incorporate your own data or try another type of object detection model, check out the `advanced_usage/` section.
 - Turi Create has built-in model evaluation and prediction techniques. We use some of the functions  in the `advanced_usage/` section, but for more detailed description, refer to Turi Create's [documentation](https://apple.github.io/turicreate/docs/api/turicreate.toolkits.evaluation.html).
 
-
 ## Need Help?
 Please contact us with questions or feedback! Here are two ways:
-
 
 -  [**Signup for our Slack Channel**](https://skafosai.slack.com)
 -  [**Find us on Reddit**](https://reddit.com/r/skafos) 
 
-Also checkout Turi Create's [**documentation**](https://apple.github.io/turicreate/docs/userguide/object_detection) on object detection basics.
-
-
+Also check out Turi Create's [**documentation**](https://apple.github.io/turicreate/docs/userguide/object_detection) on object detection basics.
