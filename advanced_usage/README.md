@@ -17,7 +17,7 @@ Didn't find something you need? Confused by something? Need more guidance?
 
 Please contact us with questions or feedback! Here are two ways:
 
--  [**Signup for our Slack Channel**](https://metismachine-skafos.slack.com/join/shared_invite/enQtNTAxMzEwOTk2NzA5LThjMmMyY2JkNTkwNDQ1YjgyYjFiY2MyMjRkMzYyM2E4MjUxNTJmYmQyODVhZWM2MjQwMjE5ZGM1Y2YwN2M5ODI)
+-  [**Signup for our Slack Channel**](https://skafosai.slack.com/)
 -  [**Find us on Reddit**](https://reddit.com/r/skafos)
 
 Also checkout Turi Create's [**documentation**](https://apple.github.io/turicreate/docs/userguide/object_detection/) on object detection basics.
