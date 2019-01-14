@@ -11,6 +11,7 @@ The purpose of this Advanced Usage Guide is to provide additional tooling, tips,
 ## Resources
 
 -  `object_images_in_turicreate.ipynb`: Gives some tips on wrangling image data and bounding boxes in Turi Create, detailing proper formatting and several helper functions.
+-  `load_object_data.ipynb`: another module to help with wrangling images and bounding boxes.
 
 ## Need Help?
 Didn't find something you need? Confused by something? Need more guidance?
@@ -20,4 +21,4 @@ Please contact us with questions or feedback! Here are two ways:
 -  [**Signup for our Slack Channel**](https://skafosai.slack.com/)
 -  [**Find us on Reddit**](https://reddit.com/r/skafos)
 
-Also checkout Turi Create's [**documentation**](https://apple.github.io/turicreate/docs/userguide/object_detection/) on object detection basics.
+Also check out Turi Create's [**documentation**](https://apple.github.io/turicreate/docs/userguide/object_detection/) on object detection basics.
