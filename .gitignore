@@ -3,3 +3,4 @@ ig02.sframe
 __pycache__
 .ipynb_checkpoints/
 GPUCache/
+.idea*

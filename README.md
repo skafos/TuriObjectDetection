@@ -2,22 +2,31 @@
 
 _This public repository is designed for use in the Skafos ML delivery platform, which is available at metismachine.com. Use of this repo outside of the Skafos platform is not supported by Metis Machine._
 
-The following repo contains code for training an object detection model on Skafos using the Turi Create framework. As much as possible, the code in this repo mimicks Turi Create's object detection example which can be found [here](https://apple.github.io/turicreate/docs/userguide/object_detection/). 
+The following repo contains code for training an object detection model on Skafos using the [Turi Create framework](https://apple.github.io/turicreate/docs/userguide/object_detection/). The example model is based on images of cars, bikes and people. Given a new image containing cars, bikes, and or people, the model will detect instances of each and classify each instance as one of the three classes above.
 
 ## What is here?
+The components of this repo are:
 
-The two main components to this repo are:
-- `object_detection.py` - a Skafos job that trains an object detection model and saves a core ml model
-- `object_detection.ipynb` - a python notebook with the same code as the above `object_detection.py` job.
+-  `object_detection.ipynb` - a Python notebook that trains and saves an object detection model to use in your app. Start here.
+-  `utilities/` - a directory that contains helper functions used by `object_detection.ipynb`.
+-  `advanced_usage/` - a directory that contains additional information about this object detection model, how to incorporate your own data, advanced usage, and additional example models.
+-  `requirements.txt` - a file describing all required Python dependencies.
 
-Additionallly, there exist:
-- `metis.config.yml` - a file telling Skafos how to execute the jobs in this project
-- `requirements.txt` - a file telling Skafos the project's dependencies
-- `save_models.py` - a helper module to save the core ml model to Skafos
-- `load_object_data.ipynb` - a helper notebook that saved the data in the proper format for this model. This was taken from [Turi Create's own data cleaning](https://apple.github.io/turicreate/docs/userguide/object_detection/data-preparation.html). You should only need to use this file if you are training this model on your own data, and need a template for getting it in the right format.
+## About the model
+-  The object detection model is trained on [images of people, cars and bikes](https://lear.inrialpes.fr/people/marszalek/data/ig02/).
+-  Once trained, you can give the model a new image, and if the image contains a person, car or bike, it will:
+    -  Detect the object in the image by surrounding it with a "bounding box".
+    -  Classify the object within the bounding box as either a person, car or bike. 
+-  The model takes several days to train in the JupyterLab session on CPUs. To decrease this run time, you can deploy as a job and ask Skafos for more resources. To read more about this, check out [Skafos Jobs documentation](https://docs.metismachine.io/docs/jobs-1).
 
-## Further notes:
-- For retraining this object detection model on new data, we highly recommend doing it on a GPU. As benchmarks, we've found that training this Turi Create object detection model takes about 60 minutes on a GPU and about 1.5 days on Skafos with 6 CPU's and 10G of memory. Training will take considerably more time locally using only CPU. GPU support on Skafos is currently in development and will be coming soon.
+## Going beyond the example
+- If you wish to incorporate your own data or try another type of object detection model, check out the `advanced_usage/` section.
+- Turi Create has built-in model evaluation and prediction techniques. We use some of the functions  in the `advanced_usage/` section, but for more detailed description, refer to Turi Create's [documentation](https://apple.github.io/turicreate/docs/api/turicreate.toolkits.evaluation.html).
 
-## Going beyond the example:
-- Obtaining object detection images can be challenging as bounding boxes are required. Getting these images into Turi Create can also be challenging. If you wish to incorporate your own data, check out `object_images_in_turicreate.ipynb`. It will detail the format you should have your data in. It also includes several helper functions that might help you get your data into the Turi Create framework.
+## Need Help?
+Please contact us with questions or feedback! Here are two ways:
+
+-  [**Signup for our Slack Channel**](https://skafosai.slack.com)
+-  [**Find us on Reddit**](https://reddit.com/r/skafos) 
+
+Also check out Turi Create's [**documentation**](https://apple.github.io/turicreate/docs/userguide/object_detection) on object detection basics.
