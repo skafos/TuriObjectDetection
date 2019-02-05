@@ -1,2 +1,2 @@
-skafossdk>=1.1.9
-turicreate==5.1
+skafossdk==1.1.9
+turicreate==5.2.1
