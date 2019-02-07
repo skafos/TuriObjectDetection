@@ -1,5 +1,5 @@
-mkdir -p ~/Downloads/ig02
-cd ~/Downloads/ig02
+mkdir -p /home/jovyan/Downloads/ig02
+cd /home/jovyan/Downloads/ig02
 
 printf "%s\n Downloading bikes %s\n"
 curl https://lear.inrialpes.fr/people/marszalek/data/ig02/ig02-v1.0-bikes.zip > bikes.zip

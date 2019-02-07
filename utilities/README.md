@@ -3,9 +3,10 @@
 ## Resources
 The following modules assist in developing machine learning models on Skafos.
 
--  `load_turicreate.py`: a module to help ensure that Turi Create is installed correctly in your JLab session.
+-  `dependencies.py`: a module to help ensure that Python packages are installed correctly in your JLab session.
 -  `save_models.py`: a module to help with saving models to Skafos.
 -  `download_ig02.sh`: a bash script to download the IG02 data set used in training the model in this example. Can be run by typing `./download_ig02.sh` and hitting enter from a terminal.
+      - Note: if you are running into `Permission Denied` errors, try running `chmod u+x download_ig02.sh` and then running the script.
 
 ## Need Help?
 Didn't find something you need? Feel free to add other helper modules to this subdirectory as you continue the development of your models.
