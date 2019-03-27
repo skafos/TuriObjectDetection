@@ -17,7 +17,7 @@ The components of this repo are:
 -  Once trained, you can give the model a new image, and if the image contains a person, car or bike, it will:
     -  Detect the object in the image by surrounding it with a "bounding box".
     -  Classify the object within the bounding box as either a person, car or bike. 
--  The model takes several days to train in the JupyterLab session on CPUs. To decrease this run time, you can deploy as a job and ask Skafos for more resources. To read more about this, check out [Skafos Jobs documentation](https://docs.metismachine.io/docs/jobs-1).
+-  The model takes several days to train in the JupyterLab session on CPUs. To decrease this run time, you can deploy as a job [and request a GPU for training](https://docs.metismachine.io/v1.3.1/docs/using-a-gpu).
 
 ## Going beyond the example
 - If you wish to incorporate your own data or try another type of object detection model, check out the `advanced_usage/` section.
